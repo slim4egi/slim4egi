@@ -1,0 +1,17 @@
+{
+  "$schema": "https://unpkg.com/wrangler@latest/config-schema.json",
+  "name": "stkmeter",
+  "main": "./src/index.js",
+  "compatibility_date": "2026-09-27",
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS"
+  },
+  "d1_databases": [
+    {
+      "binding": "STK_METER_DB",
+      "database_name": "stk-meter-orders",
+      "database_id": "1a79e254-ecf0-480e-b9e9-8d13c9299b25"
+    }
+  ]
+}

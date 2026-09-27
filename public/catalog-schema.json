@@ -1,0 +1,15 @@
+{
+  "version": "2.0",
+  "topCategories": [
+    {"name":"Приборы учета","slug":"pribory-ucheta"},
+    {"name":"Узлы коллекторные","slug":"uzly-kollektornye"},
+    {"name":"Арматура трубопроводная","slug":"armatura-truboprovodnaya"},
+    {"name":"Системы учета энергоресурсов и компоненты АСКУЭ","slug":"sistemy-ucheta-energoresursov-i-askue"}
+  ],
+  "productFields": {
+    "required": ["name","manufacturer","topCategory","subCategory"],
+    "catalog": ["article","price","priceType","minOrder","availability","images","sourceUrl"],
+    "description": ["description","specifications","documents"],
+    "plannedFilters": ["manufacturer","dn","application","meterType","communication","q3","accuracyClass","temperature","pressure","connection","mountingLength"]
+  }
+}

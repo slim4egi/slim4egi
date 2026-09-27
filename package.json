@@ -1,0 +1,7 @@
+{
+  "name": "stkmeter",
+  "private": true,
+  "scripts": {
+    "deploy": "npx wrangler deploy"
+  }
+}

@@ -1,0 +1,148 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Каталог приборов учёта — СТК МЕТЕР</title>
+  <meta name="description" content="Счётчики воды, теплосчётчики, расходомеры, системы диспетчеризации и монтажные части. Подбор и поставка ООО «СТК МЕТЕР».">
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='13' fill='%23133455'/%3E%3Cpath d='M17 18h30v8H36v22h-9V26H17z' fill='white'/%3E%3Ccircle cx='48' cy='17' r='6' fill='%23e53935'/%3E%3C/svg%3E">
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+  <header class="site-header">
+    <a class="brand" href="#top" aria-label="СТК МЕТЕР — на главную">
+      <img class="brand-logo" src="./stk-meter-logo.png" alt="СТК МЕТЕР — Стандарт точности и качества">
+    </a>
+    <nav class="top-nav" aria-label="Основная навигация">
+      <a href="#catalog">Каталог</a>
+      <a href="#delivery">Условия поставки</a>
+      <a href="#contacts">Контакты</a>
+    </nav>
+    <div class="header-actions"><button id="cart-button" class="cart-button" type="button" aria-label="Открыть заявку">🛒 Заявка <span id="cart-count" class="cart-count">0</span></button><a class="header-phone" href="tel:+79266129977">+7 (926) 612-99-77</a></div>
+  </header>
+
+  <main id="top">
+    <section class="catalog-intro" aria-labelledby="page-title">
+      <div class="intro-copy">
+        <p class="eyebrow">Приборы учёта, автоматизация и монтаж</p>
+        <h1 id="page-title">Подберём счётчик под ваши технические параметры</h1>
+        <p>Счётчики воды, теплосчётчики, расходомеры, системы диспетчеризации и комплектующие. Поставка по России, подбор аналогов, документы и техническая консультация.</p>
+      </div>
+      <div class="intro-stat" aria-label="Ассортимент витрины">
+        <strong id="intro-count">…</strong>
+        <span>позиций в витрине</span>
+      </div>
+    </section>
+
+    <section id="catalog" class="catalog-section" aria-labelledby="catalog-title">
+      <div class="catalog-heading">
+        <div>
+          <p class="eyebrow">Каталог</p>
+          <h2 id="catalog-title">Каталог продукции</h2>
+        </div>
+        <p class="catalog-note">Каталог продукции сторонних производителей. Точная цена, наличие и срок поставки подтверждаются при оформлении заявки.</p>
+      </div>
+
+      <div class="catalog-toolbar">
+        <label class="search-field">
+          <span class="sr-only">Поиск по каталогу</span>
+          <svg aria-hidden="true" viewBox="0 0 24 24"><path d="m21 21-4.7-4.7m2.2-5.3a7.5 7.5 0 1 1-15 0 7.5 7.5 0 0 1 15 0Z"/></svg>
+          <input id="search" type="search" placeholder="Модель, артикул, DN, тип или производитель…" autocomplete="off">
+        </label>
+        <label class="select-field">
+          <span>Бренд</span>
+          <select id="brand-filter">
+            <option value="all">Все бренды</option>
+            <option value="Декаст">Декаст</option>
+            <option value="Водомер">Водомер</option>
+          </select>
+        </label>
+        <label class="select-field">
+          <span>Сортировка</span>
+          <select id="sort-filter">
+            <option value="featured">Сначала рекомендуемые</option>
+            <option value="price-asc">Цена: по возрастанию</option>
+            <option value="price-desc">Цена: по убыванию</option>
+            <option value="name">По наименованию</option>
+          </select>
+        </label>
+      </div>
+
+      <div id="top-category-filters" class="category-filters" aria-label="Основные разделы каталога"></div>
+      <div id="subcategory-filters" class="category-filters subcategory-filters" aria-label="Подкатегории каталога"></div>
+
+      <div class="results-row">
+        <p id="results-count" aria-live="polite"></p>
+        <button id="reset-filters" class="text-button" type="button">Сбросить фильтры</button>
+      </div>
+
+      <div id="product-grid" class="product-grid"></div>
+      <div class="load-more-wrap"><button id="load-more" class="button button-secondary load-more" type="button" hidden>Показать ещё</button></div>
+      <div id="empty-state" class="empty-state" hidden>
+        <h3>Ничего не найдено</h3>
+        <p>Измените запрос или сбросьте фильтры. Для подбора по техническому заданию напишите нам напрямую.</p>
+        <a class="button button-primary" href="mailto:info@stkmeter.ru?subject=Запрос%20на%20подбор%20оборудования">Написать на почту</a>
+      </div>
+    </section>
+
+    <section id="delivery" class="service-strip" aria-label="Условия поставки">
+      <article><span>01</span><div><h3>Технический подбор</h3><p>Проверим Ду, монтажную длину, среду, интерфейс и класс точности.</p></div></article>
+      <article><span>02</span><div><h3>Документы</h3><p>Паспорт, свидетельство о поверке и комплект поставки — по запросу.</p></div></article>
+      <article><span>03</span><div><h3>Поставка по России</h3><p>Рассчитаем срок, доставку и коммерческое предложение под ваш объём.</p></div></article>
+    </section>
+
+    <section id="contacts" class="contact-panel">
+      <div>
+        <p class="eyebrow">ООО «СТК МЕТЕР»</p>
+        <h2>Нужен счётчик под конкретный объект?</h2>
+        <p>Направьте перечень, техническое задание или фотографию шильдика прямо на нашу корпоративную почту — подготовим подбор и предложение.</p>
+        <p class="privacy-note">Заявка на подбор и выставление счёта будет оформляться отдельно с обязательным согласием на обработку персональных данных.</p>
+      </div>
+      <div class="contact-actions">
+        <a class="button button-primary" href="mailto:info@stkmeter.ru?subject=Запрос%20на%20подбор%20оборудования">Написать на почту</a>
+        <a class="button button-secondary" href="tel:+79266129977">Позвонить</a>
+      </div>
+    </section>
+  </main>
+
+  <div id="cart-modal" class="modal" hidden aria-hidden="true">
+    <div class="modal-backdrop" data-close-cart></div>
+    <section class="modal-dialog cart-dialog" role="dialog" aria-modal="true" aria-labelledby="cart-title">
+      <div class="modal-header"><div><p class="eyebrow">Заявка на счёт</p><h2 id="cart-title">Ваша заявка</h2></div><button class="modal-close" type="button" data-close-cart aria-label="Закрыть">×</button></div>
+      <div id="cart-content"></div>
+    </section>
+  </div>
+
+  <div id="request-modal" class="modal" hidden aria-hidden="true">
+    <div class="modal-backdrop" data-close-request></div>
+    <section class="modal-dialog request-dialog" role="dialog" aria-modal="true" aria-labelledby="request-title">
+      <div class="modal-header"><div><p class="eyebrow">Оформление</p><h2 id="request-title">Отправить заявку</h2></div><button class="modal-close" type="button" data-close-request aria-label="Закрыть">×</button></div>
+      <form id="request-form" class="request-form">
+        <div class="form-grid">
+          <label>Организация *<input name="organization" required maxlength="200"></label>
+          <label>ИНН *<input name="inn" required inputmode="numeric" pattern="[0-9]{10,12}" maxlength="12"></label>
+          <label>КПП<input name="kpp" inputmode="numeric" pattern="[0-9]{9}" maxlength="9"></label>
+          <label>Контактное лицо *<input name="contact" required maxlength="150"></label>
+          <label>Телефон *<input name="phone" required type="tel" maxlength="30"></label>
+          <label>E-mail *<input name="email" required type="email" maxlength="200"></label>
+        </div>
+        <label>Комментарий<textarea name="comment" rows="4" maxlength="2000" placeholder="Пожелания по поставке, срокам, доставке и т. п."></textarea></label>
+        <div class="consent-box">
+          <label class="consent-label"><input id="personal-data-consent" name="personalDataConsent" type="checkbox" required><span>Я даю согласие ООО «СТК Метер» на обработку моих персональных данных в соответствии с <a href="privacy-consent.html" target="_blank" rel="noopener">Согласием на обработку персональных данных</a>.</span></label>
+          <p>Согласие является отдельным от заявки и необходимо для её отправки.</p>
+        </div>
+        <div id="request-summary" class="request-summary"></div>
+        <button class="button button-primary submit-request" type="submit">Отправить заявку</button>
+      </form>
+    </section>
+  </div>
+
+  <footer>
+    <div class="footer-brand"><img src="./stk-meter-logo.png" alt="СТК МЕТЕР"></div>
+    <div><a href="mailto:info@stkmeter.ru">info@stkmeter.ru</a><a href="https://stkmeter.ru">stkmeter.ru</a></div>
+    <p>Цены являются ориентировочными, указаны с формулировкой «до» и не являются публичной офертой. Товарные знаки и изображения принадлежат правообладателям. Актуальность данных: 25.09.2026.</p>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>
