@@ -181,7 +181,7 @@ async function sendOrderEmail(env, data) {
     },
     body: JSON.stringify({
       from: env.RESEND_FROM,
-      to: ['delivered@resend.dev'],
+      to: ['info@stkmeter.ru'],
       reply_to: data.email,
       subject: `ТЕСТ — новая заявка ${data.orderNumber} — ${data.organization}`,
       html: buildOrderEmail(data),
